@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Layout Boxes</title>
+  <style>
+    .container {
+      height: 300px;
+      width: 80%;
+      border: 1px solid black;
+    }
+
+    .main_two_part {
+      height: 300px;
+      width: 80%;
+      border: 1px solid black;
+    }
+
+    .three_vertical_boxes {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+
+    .box {
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .b1 {
+      flex: 1;
+      background-color: lightblue;
+    }
+    .b1 img {
+       width: 100%;
+      height: 100%;
+    }
+
+    .b2 {
+      flex: 1;
+      background-color: lightgreen;
+    }
+
+    .b3 {
+      flex: 1;
+      background-color: lightcoral;
+    }
+
+    .b2_three_vertical_boxes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .b2a,
+    .b2b,
+    .b2c {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .b2a {
+      background-color: lightyellow;
+    }
+
+    .b2b {
+      background-color: lightpink;
+    }
+
+    .b2c {
+      background-color: lightgray;
+    }
+
+    .b2c_three_vertical_boxes {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+    .b2c1,
+    .b2c2,
+    .b2c3 {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b2c1 p{
+        width: 100%;
+        height: 100%;
+    }
+
+    .b2c1 {
+      background-color: lightseagreen;
+    }
+
+    .b2c2 {
+      background-color: lightsteelblue;
+    }
+
+    .b2c3 {
+      background-color: lightpink;
+    }
+
+    .b3_two_horizontal_boxes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .b3a,
+    .b3b {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .b3a {
+      background-color: lightcyan;
+    }
+
+    .b3b {
+      background-color: lightgoldenrodyellow;
+    }
+
+    .two_two_vertical_boxes {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+
+    .b4 {
+      flex: 0 0 44%;
+      background-color: lightcoral;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .b5 {
+      flex: 0 0 56%;
+      background-color: lightblue;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b3_two_horizontal_boxes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    .b4_two_horizontal_boxes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    .b4a,
+    .b4b {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b4a {
+      background-color: lightyellow;
+    }
+    .b4b {
+      background-color: lightgreen;
+    }
+
+    .b4a_two_verical_boxes {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+    .b4a1,
+    .b4a2 {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b4a1 {
+      background-color: lightseagreen;
+    }
+    .b4a2 {
+      background-color: lightsteelblue;
+    }
+    .b4b_three_vertical_boxes {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+    .b4b1,
+    .b4b2,
+    .b4b3 {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b4b1 {
+      background-color: lightpink;
+    }
+    .b4b2 {
+      background-color: lightgoldenrodyellow;
+    }
+    .b4b3 {
+      background-color: lightcyan;
+    }
+
+  
+    .b5_two_boxes_one_is_34_and_other_is_30_width {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    .b5a,
+    .b5b {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b5a {
+      flex: 0 0 60%;
+      background-color: lightcoral;
+    }
+    .b5b {
+      flex: 0 0 40%;
+      background-color: lightblue;
+    }
+    .b5b_three_horizontally_boxes {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    .b5b1,
+    .b5b2,
+    .b5b3 {
+      flex: 1;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .b5b1 {
+      background-color: lightyellow;
+    }
+    .b5b2 {
+      background-color: lightgreen;
+    }
+
+    .b5b3 {
+      background-color: lightpink;
+    }
+
+.b2c2 vedio{
+     background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="three_vertical_boxes">
+      <div class="box b1"><img src="rohit_sharma.jpeg"></div>
+      <div class="box b2">
+        <div class="b2_three_vertical_boxes">
+          <div class="box b2a"><p>Rohit Sharma is one of India’s most celebrated cricketers and the current captain of the Indian national cricket team in all formats. Born on April 30, 1987, in Nagpur, Maharashtra, Rohit is known for his elegant batting style and ability to score big centuries.</p></div>
+          <div class="box b2b"><p>"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing."</p></div>
+          <div class="box b2c">
+            <div class="b2c_three_vertical_boxes">
+              <div class="box b2c1"><p></p>cricket</p></div>
+              <div class="box b2c2"><video src="https://www.youtube.com/watch?v=zRzD3-a9_qc&list=RDzRzD3-a9_qc&start_radio=1" muted controls></video></div>
+              <div class="box b2c3">2c3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box b3">
+        <div class="b3_two_horizontal_boxes">
+          <div class="box b3a">3a</div>
+          <div class="box b3b">3b</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_two_part">
+    <div class="two_two_vertical_boxes">
+      <div class="b4">
+        
+        <div class="b4_two_horizontal_boxes">
+            <div class="box b4a">
+                <div class="b4a_two_verical_boxes">
+                    <div class="box b4a1">4a1</div>
+                    <div class="box b4a2">4a2</div>
+
+                </div>
+            </div>
+            <div class="box b4b">
+                <div class="b4b_three_vertical_boxes">
+
+                    <div class="box b4b1">4b1</div>
+                    <div class="box b4b2">4b2</div>
+                    <div class="box b4b3">4b3</div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="b5">
+    <div class="b5_two_boxes_one_is_34_and_other_is_30_width">
+        <div class="box b5a">5a</div>
+        <div class="box b5b">
+            <div class="b5b_three_horizontally_boxes">
+                <div class="box b5b1">5b1</div>
+                <div class="box b5b2">5b2</div>
+                <div class="box b5b3">5b3</div>
+            </div>
+        </div>   
+</div>
+    
+    </div>
+  </div>
+</body>
+</html>
